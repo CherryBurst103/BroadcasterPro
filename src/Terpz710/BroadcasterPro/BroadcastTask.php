@@ -17,7 +17,7 @@ class BroadcastTask extends Task {
         $this->currentIndex = 0;
     }
 
-    public function onRun() {
+    public function onRun(): void {
         if ($this->currentIndex >= count($this->messages)) {
             $this->currentIndex = 0;
         }
