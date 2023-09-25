@@ -12,7 +12,7 @@ class BroadcastTask extends Task {
         $this->plugin = $plugin;
     }
 
-    public function onRun(int $currentTick) {
+    public function onRun(int $currentTick = -1): void {
         $message = $this->plugin->getConfig()->get("message");
 
         foreach ($this->plugin->getServer()->getOnlinePlayers() as $player) {
