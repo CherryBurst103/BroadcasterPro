@@ -1,0 +1,12 @@
+# Updating this soon.
+
+# Edit the broadcast message here.
+message:
+  line1: "Welcome to the server!"
+  line2: "Feel free to explore."
+  line3: "Have fun and be respectful."
+  line4: "Visit our website: example.com"
+  line5: "Follow us on Twitter: @ServerName"
+
+# Broadcast interval in seconds
+broadcast_interval: 60

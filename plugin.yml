@@ -1,0 +1,6 @@
+name: BroadcasterPro
+version: 1.0.0
+api: 5.0.0
+author: Terpz710
+main: Terpz710\BroadcasterPro\Main
+description: A broadcasting plugin for PocketMine-MP
