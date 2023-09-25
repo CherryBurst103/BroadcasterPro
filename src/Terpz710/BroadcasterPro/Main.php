@@ -9,6 +9,7 @@ class Main extends PluginBase {
 
     public function onEnable(): void {
         $broadcastInterval = $this->getConfig()->get("broadcast_interval", 1200);
+    }
 }
 
 class BroadcastTask extends Task {
@@ -24,7 +25,6 @@ class BroadcastTask extends Task {
         foreach ($this->plugin->getServer()->getOnlinePlayers() as $player) {
             foreach ($message as $line) {
                 $player->sendMessage($line);
-                }
             }
         }
     }
