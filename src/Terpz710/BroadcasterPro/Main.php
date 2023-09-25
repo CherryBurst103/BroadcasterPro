@@ -9,8 +9,6 @@ class Main extends PluginBase {
 
     public function onEnable(): void {
         $broadcastInterval = $this->getConfig()->get("broadcast_interval", 1200);
-        $this->getScheduler()->scheduleRepeatingTask(new BroadcastTask($this), $broadcastInterval);
-    }
 }
 
 class BroadcastTask extends Task {
