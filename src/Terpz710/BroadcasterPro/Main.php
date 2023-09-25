@@ -24,6 +24,7 @@ class BroadcastTask extends Task {
         foreach ($this->plugin->getServer()->getOnlinePlayers() as $player) {
             foreach ($message as $line) {
                 $player->sendMessage($line);
+                }
             }
         }
     }
