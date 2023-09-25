@@ -4,30 +4,20 @@ namespace Terpz710\BroadcasterPro;
 
 use pocketmine\plugin\Plugin;
 use pocketmine\scheduler\Task;
-use pocketmine\utils\Config;
 
 class BroadcastTask extends Task {
     private $plugin;
-    private $messages;
-    private $currentIndex;
 
-    public function __construct(Plugin $plugin, array $messages) {
+    public function __construct(Plugin $plugin) {
         $this->plugin = $plugin;
-        $this->messages = $messages;
-        $this->currentIndex = 0;
     }
 
-    public function onRun(): void {
-        if ($this->currentIndex >= count($this->messages)) {
-            $this->currentIndex = 0;
-        }
-
-        $message = $this->messages[$this->currentIndex];
+    public function onRun(int $currentTick = -1): void {
+        $message = $this->plugin->getConfig()->get("message");
+        $line = $message[array_rand($message)]; // Select a random message line
 
         foreach ($this->plugin->getServer()->getOnlinePlayers() as $player) {
-            $player->sendMessage($message);
+            $player->sendMessage($line);
         }
-
-        $this->currentIndex++;
     }
 }
