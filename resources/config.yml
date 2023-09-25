@@ -8,5 +8,5 @@ message:
   line4: "Visit our website: example.com"
   line5: "Follow us on Twitter: @ServerName"
 
-# Broadcast interval in seconds
-broadcast_interval: 60
+# Broadcast interval in ticks
+broadcast_interval: 1200
